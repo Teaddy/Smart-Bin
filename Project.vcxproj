@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2F91FE68-F5D2-4C86-9323-882D64B61895}</ProjectGuid>
+    <RootNamespace>Project2</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>STM8L151K4T6_Oil_Can_Drone-master</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>USE_STDPERIPH_DRIVER;STM32F10X_HD;__CC_ARM</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>.\APP;.\BSP;.\STM8L15x_StdPeriph_Driver\inc;D:\Program Files\Keil_v5\ARM\ARMCC\include</IncludePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <ExcludePath />
+    <SourcePath />
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="APP\Delay.c" />
+    <ClCompile Include="APP\Flash_Var.c" />
+    <ClCompile Include="APP\HCSR04.c" />
+    <ClCompile Include="APP\LaserInfrared.c" />
+    <ClCompile Include="APP\main.c" />
+    <ClCompile Include="APP\NBiotNB73.c" />
+    <ClCompile Include="APP\PowerAD.c" />
+    <ClCompile Include="APP\stm8l15x_it.c" />
+    <ClInclude Include="APP\MyTypeDef.h" />
+    <ClInclude Include="APP\stm8l15x_conf.h" />
+    <ClInclude Include="APP\stm8l15x_it.h" />
+    <ClCompile Include="BSP\bsp.c" />
+    <ClCompile Include="BSP\CC1101.c" />
+    <ClInclude Include="BSP\bsp.h" />
+    <ClInclude Include="BSP\CC1101.h" />
+    <ClInclude Include="BSP\CC1101_REG.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_adc.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_aes.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_beep.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_clk.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_comp.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_dac.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_dma.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_exti.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_flash.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_gpio.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_i2c.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_irtim.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_itc.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_iwdg.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_lcd.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_pwr.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_rst.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_rtc.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_spi.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_syscfg.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim1.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim2.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim3.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim4.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim5.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_usart.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_wfe.h" />
+    <ClInclude Include="STM8L15x_StdPeriph_Driver\inc\stm8l15x_wwdg.h" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_adc.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_aes.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_beep.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_clk.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_comp.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_dac.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_dma.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_exti.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_flash.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_gpio.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_i2c.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_irtim.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_itc.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_iwdg.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_lcd.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_pwr.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_rst.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_rtc.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_syscfg.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_tim1.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_tim2.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_tim3.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_tim4.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_tim5.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_usart.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_wfe.c" />
+    <ClCompile Include="STM8L15x_StdPeriph_Driver\src\stm8l15x_wwdg.c" />
+  </ItemGroup>
+</Project>
